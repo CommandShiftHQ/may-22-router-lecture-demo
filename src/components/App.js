@@ -9,6 +9,7 @@ import "../styles/app.css";
 
 import productsJson from "../data/products.json";
 import ProductList from "./ProductList";
+import ProductDetails from "./ProductDetails";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<h2>Home component</h2>} />
           <Route path="products" element={<ProductList products={productsJson} />} />
+          <Route path="products/product/:id" element={<ProductDetails />} />
           <Route path="about" element={<h2>About component</h2>} />
           <Route path="contact" element={<h2>Contact component</h2>} />
           <Route path="*" element={<Navigate to="/" />} />
