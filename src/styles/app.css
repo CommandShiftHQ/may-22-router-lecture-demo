@@ -11,3 +11,12 @@
   display: inline-block;
   margin-right: 1em;
 }
+
+.app__nav-list-link {
+  text-decoration: none;
+  color: black;
+}
+
+.app__nav-list-link.active {
+  font-size: 30px;
+}

@@ -1,17 +1,31 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+  NavLink,
+} from "react-router-dom";
 import "../styles/app.css";
 
 const App = () => {
   return (
-    <div className="app">
+    <div className="app active">
       <Router>
         <h1>Example shop</h1>
         <nav>
           <ul className="app__nav-list">
-            <li className="app__nav-list-item">Homepage</li>
-            <li className="app__nav-list-item">Products</li>
-            <li className="app__nav-list-item">About</li>
-            <li className="app__nav-list-item">Contact</li>
+            <li className="app__nav-list-item">
+              <NavLink className="app__nav-list-link" end to="/">Homepage</NavLink>
+            </li>
+            <li className="app__nav-list-item">
+              <NavLink className="app__nav-list-link" to="products">Products</NavLink>
+            </li>
+            <li className="app__nav-list-item">
+              <NavLink className="app__nav-list-link" to="about">About</NavLink>
+            </li>
+            <li className="app__nav-list-item">
+              <NavLink className="app__nav-list-link" to="contact">Contact</NavLink>
+            </li>
           </ul>
         </nav>
         <Routes>
