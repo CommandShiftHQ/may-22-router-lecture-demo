@@ -7,6 +7,9 @@ import {
 } from "react-router-dom";
 import "../styles/app.css";
 
+import productsJson from "../data/products.json";
+import ProductList from "./ProductList";
+
 const App = () => {
   return (
     <div className="app active">
@@ -30,7 +33,7 @@ const App = () => {
         </nav>
         <Routes>
           <Route path="/" element={<h2>Home component</h2>} />
-          <Route path="products" element={<h2>Products component</h2>} />
+          <Route path="products" element={<ProductList products={productsJson} />} />
           <Route path="about" element={<h2>About component</h2>} />
           <Route path="contact" element={<h2>Contact component</h2>} />
           <Route path="*" element={<Navigate to="/" />} />
